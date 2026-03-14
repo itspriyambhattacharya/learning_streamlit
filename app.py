@@ -1,4 +1,5 @@
 import streamlit as st
+import datetime
 
 # Chapter 1 starts
 st.title("Hello World")
@@ -66,9 +67,23 @@ name = st.text_input("Enter your name:")
 if name:
     st.success(f"Welcome: {name}")
 
-dob = st.datetime_input(
+dob = st.date_input(
     "Date of Birth"
 )
 
 if dob:
     st.success(f"DOB: {dob}")
+
+today = st.date_input("Totay's Date", disabled=True)
+dob2 = st.date_input(
+    " Your Date of Birth for prediction",
+    min_value=datetime.date(1996, 5, 7),
+    max_value=datetime.date.today()
+)
+
+st.write(f"Today's date: {datetime.date.today()}")
+st.write(f"Today's year: {datetime.date.today().year}")
+
+if st.button("Predict age"):
+    yr = datetime.date.today().year - dob2.year
+    st.success(f"Age is  {yr}")
