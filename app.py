@@ -52,6 +52,12 @@ age = st.slider(
     "Age",
     min_value=6,
     max_value=50,
-    value=21
+    value=20,
+    step=2
 )
 st.write(f"The age is: {age}")
+
+marks = st.number_input(
+    "Marks"
+)
+st.write(f"Makrs obtained: {marks}")
