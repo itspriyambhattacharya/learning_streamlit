@@ -87,3 +87,7 @@ st.write(f"Today's year: {datetime.date.today().year}")
 if st.button("Predict age"):
     yr = datetime.date.today().year - dob2.year
     st.success(f"Age is  {yr}")
+
+# chapter 2 ends
+
+# chapter 3 starts
