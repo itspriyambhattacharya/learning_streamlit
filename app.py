@@ -61,3 +61,14 @@ marks = st.number_input(
     "Marks"
 )
 st.write(f"Makrs obtained: {marks}")
+
+name = st.text_input("Enter your name:")
+if name:
+    st.success(f"Welcome: {name}")
+
+dob = st.datetime_input(
+    "Date of Birth"
+)
+
+if dob:
+    st.success(f"DOB: {dob}")
