@@ -91,3 +91,15 @@ if st.button("Predict age"):
 # chapter 2 ends
 
 # chapter 3 starts
+
+# building layouts
+
+sec1, sec2 = st.columns(2, border=True)
+
+with sec1:
+    st.header("Section 1")
+    v1 = st.button("Vote Student 1")
+
+with sec2:
+    st.header("Section 2")
+    v2 = st.button("Vote student 2")
