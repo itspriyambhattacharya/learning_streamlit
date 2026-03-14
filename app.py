@@ -99,7 +99,19 @@ sec1, sec2 = st.columns(2, border=True)
 with sec1:
     st.header("Section 1")
     v1 = st.button("Vote Student 1")
+    st.image(
+        "https://images.pexels.com/photos/1172675/pexels-photo-1172675.jpeg",
+        width=300
+    )
 
 with sec2:
     st.header("Section 2")
     v2 = st.button("Vote student 2")
+
+name = st.sidebar.text_input("Enter name")
+feedback = st.sidebar.text_area("Enter feedback")
+
+if name and feedback:
+    st.sidebar.write(f"Name is: {name} and Feedback is: {feedback}")
+
+# chapter 3 ends
